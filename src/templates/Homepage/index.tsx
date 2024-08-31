@@ -7,6 +7,7 @@ import TechStack from "./tech-stack";
 import ContactMe from "./contact-me";
 import AboutMe from "./about-me";
 import WorkExperiences from "./work-experience";
+import Blogs from "./blogs";
 
 const Homepage = () => {
   return (
@@ -18,6 +19,7 @@ const Homepage = () => {
       <WorkExperiences />
       <AboutMe />
       <ContactMe />
+      <Blogs />
     </Layout>
   );
 };
