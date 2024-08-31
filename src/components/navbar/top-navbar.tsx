@@ -10,17 +10,28 @@ import { Mail } from "lucide-react";
 const Navbar = () => {
   const pathname = usePathname();
   const [activeIndex, setActiveIndex] = useState(0);
+  console.log(activeIndex);
   const [menuItemWidths, setMenuItemWidths] = useState<number[]>([]);
   const menuItemRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
   useEffect(() => {
-    const widths = menuItemRefs.current.map((ref) => ref?.offsetWidth || 0);
-    setMenuItemWidths(widths);
+    // Update widths when refs change
+    const updateWidths = () => {
+      const widths = menuItemRefs.current.map((ref) => ref?.offsetWidth || 0);
+      setMenuItemWidths(widths);
+    };
 
+    updateWidths();
+
+    // Set active index based on current pathname
     const currentIndex = navItems.findIndex((item) => item.href === pathname);
     if (currentIndex !== -1) {
       setActiveIndex(currentIndex);
     }
+
+    // Recalculate widths on window resize to ensure proper width calculation
+    window.addEventListener("resize", updateWidths);
+    return () => window.removeEventListener("resize", updateWidths);
   }, [pathname]);
 
   const calculateSliderPosition = (index: number) => {
@@ -29,8 +40,12 @@ const Navbar = () => {
       .reduce((acc, ref) => acc + (ref?.offsetWidth || 0), 0);
   };
 
-  const handleSmoothScroll = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    // Check if href is an internal anchor link
+  const handleSmoothScroll = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+    index: number
+  ) => {
+    setActiveIndex(index);
     if (href.startsWith("#")) {
       event.preventDefault();
       const targetId = href.replace("#", "");
@@ -56,24 +71,25 @@ const Navbar = () => {
               className={`relative block py-2 px-5 rounded-full text-center z-10 ${
                 activeIndex === index ? "text-black" : "text-white/60"
               }`}
-              passHref
               href={item.href}
-              onClick={(e) => handleSmoothScroll(e, item.href)}
+              onClick={(e) => handleSmoothScroll(e, item.href, index)}
             >
               {item.name}
             </Link>
           ))}
-          <motion.div
-            initial={false}
-            animate={{
-              x: calculateSliderPosition(activeIndex),
-              width: menuItemWidths[activeIndex],
-              backgroundColor: "#fff",
-              color: "#222",
-            }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="absolute top-1 bottom-1 left-1 rounded-full pointer-events-none z-0"
-          />
+          {menuItemWidths.length > 0 && (
+            <motion.div
+              initial={false}
+              animate={{
+                x: calculateSliderPosition(activeIndex),
+                width: menuItemWidths[activeIndex],
+                backgroundColor: "#fff",
+                color: "#222",
+              }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              className="absolute top-1 bottom-1 left-1 rounded-full pointer-events-none z-0"
+            />
+          )}
         </div>
 
         <div>

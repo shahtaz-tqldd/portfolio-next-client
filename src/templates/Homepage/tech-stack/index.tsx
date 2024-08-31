@@ -4,7 +4,7 @@ import AOS from "@/components/ui/aos";
 
 const TechStack = () => {
   return (
-    <section className="container py-20">
+    <section id="skills" className="container pt-28 pb-10">
       <div className="max-w-5xl mx-auto">
         <AOS>
           <h2 className="text-center text-7xl font-science">
@@ -17,14 +17,14 @@ const TechStack = () => {
           </p>
         </AOS>
         <div className="flex flex-wrap justify-center gap-x-12 gap-y-8">
-          {techs?.map((tech, index) => (
+          {techs?.map(({ icon: Icon, name }, index) => (
             <AOS
               key={index}
-              className="flex items-center gap-2"
+              className="flex items-center gap-2.5 text-green-300 text-xl"
               delay={index * 0.05}
             >
-              <tech.icon className="text-2xl text-green-300" />
-              <span className="text-green-300 text-xl">{tech.name}</span>
+              <Icon />
+              <span>{name}</span>
             </AOS>
           ))}
         </div>

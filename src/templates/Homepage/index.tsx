@@ -4,8 +4,9 @@ import Layout from "@/layout";
 import Features from "./features";
 import Projects from "./projects";
 import TechStack from "./tech-stack";
-import ContactUs from "./contact-us";
+import ContactMe from "./contact-me";
 import AboutMe from "./about-me";
+import WorkExperiences from "./work-experience";
 
 const Homepage = () => {
   return (
@@ -13,10 +14,10 @@ const Homepage = () => {
       <Hero />
       <Features />
       <Projects />
-      {/* <WorkingProcess /> */}
       <TechStack />
-      <AboutMe/>
-      <ContactUs />
+      <WorkExperiences />
+      <AboutMe />
+      <ContactMe />
     </Layout>
   );
 };

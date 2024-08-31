@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import profile from "@/assets/images/profile.png";
 import WordPullUp from "@/components/magicui/word-pull-up";
-import SocialMedia from "../contact-us/social-media";
+import SocialMedia from "../contact-me/social-media";
 import DotPattern from "@/components/magicui/dot-pattern";
 import AOS from "@/components/ui/aos";
 import PrimaryButton from "@/components/buttons/primary-button";
@@ -38,8 +38,15 @@ const Hero = () => {
         </AOS>
         <AOS delay={0.5}>
           <div className="mt-10 flex justify-center gap-5 mb-10">
-            <PrimaryButton>Get My Resume</PrimaryButton>
-            <SecondaryButton>See Projects</SecondaryButton>
+            <a
+              href="https://drive.google.com/file/d/1lV9dIwZU1Ede97Fao-GY1s3EjLPyjvO-/view"
+              target="__blank"
+            >
+              <PrimaryButton>Get My Resume</PrimaryButton>
+            </a>
+            <a href="#skills">
+              <SecondaryButton>My Expertise</SecondaryButton>
+            </a>
           </div>
         </AOS>
         <AOS delay={0.75}>

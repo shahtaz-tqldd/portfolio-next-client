@@ -14,7 +14,7 @@ import {
   SiAngular,
 } from "react-icons/si";
 
-const techIcons = {
+const techIcons: { [key: string]: React.ComponentType } = {
   "React JS": FaReact,
   "Next JS": SiNextdotjs,
   Typescript: SiTypescript,
@@ -31,12 +31,13 @@ const techIcons = {
   Django: SiDjango,
   "Angular JS": SiAngular,
 };
-interface ITechs{
-name: string;
-icon: React.ComponentType
+
+export interface ITech {
+  name: string;
+  icon: React.ComponentType;
 }
 
-export const techs:ITechs = [
+export const techs: ITech[] = [
   "React JS",
   "Next JS",
   "Typescript",
@@ -54,5 +55,5 @@ export const techs:ITechs = [
   "Angular JS",
 ].map((tech) => ({
   name: tech,
-  icon: techIcons[tech],
+  icon: techIcons[tech as keyof typeof techIcons],
 }));

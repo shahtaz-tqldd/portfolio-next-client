@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode, useEffect, useRef, useCallback } from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 interface AOSProps {
@@ -16,13 +16,24 @@ const AOS: React.FC<AOSProps> = ({
   duration = 0.4,
   delay = 0,
   direction = "up",
-  className,
+  className="",
 }) => {
   const controls = useAnimation();
   const scrollRef = useRef<HTMLDivElement | null>(null);
+  const [isMounted, setIsMounted] = useState(false);
 
-  const handleIntersection = useCallback(
-    (entries: IntersectionObserverEntry[]) => {
+  useEffect(() => {
+    setIsMounted(true);
+
+    return () => {
+      setIsMounted(false); 
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return; 
+
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           controls.start("show");
@@ -30,11 +41,8 @@ const AOS: React.FC<AOSProps> = ({
           controls.start("hidden");
         }
       });
-    },
-    [controls]
-  );
+    };
 
-  useEffect(() => {
     const observer = new IntersectionObserver(handleIntersection, {
       threshold: 0.2,
     });
@@ -49,13 +57,15 @@ const AOS: React.FC<AOSProps> = ({
         observer.unobserve(current);
       }
     };
-  }, [handleIntersection]);
+  }, [controls, isMounted]);
 
   return (
     <motion.div
       ref={scrollRef}
-      className={`${className} ${direction === "down" ? "mb-5" : "mt-5"} ${
-        direction === "right" ? "mr-5" : "ml-5"
+      className={`${className} ${
+        direction === "down" ? "mb-5" : direction === "up" ? "mt-5" : "my-0"
+      } ${
+        direction === "right" ? "mr-5" : direction === "left" ? "ml-5" : "mx-0"
       }`}
       variants={{
         hidden: { opacity: 0 },

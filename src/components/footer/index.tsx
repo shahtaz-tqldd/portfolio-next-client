@@ -9,24 +9,26 @@ const Footer = () => {
     <footer className="border-t border-white/20 py-10">
       <div className="container flex lg:flex-row flex-col lg:justify-between gap-6">
         <div>
-          <SparklesText text="ALGOSTAR" />
-
-          <p className="text-white/60 mt-4 text-sm max-w-[500px]">
-            Algostar is a web development agancey specialized in building CRM,
-            ERP and SaaS. We provide you web design and development solutions.
-            From your ideas to UI/UX design and development, all in one place
+          <h2 className="font-science tracking-wider">FYI</h2>
+          <p className="text-white/60 mt-3 text-sm max-w-[500px]">
+            This portfolio site is designed by myself slightly on Figma and then
+            developed with Next JS, TypeScript, Tailwind CSS and Magic UI
           </p>
         </div>
         <div className="flex items-center gap-10">
           {navItems?.map((nav, i) => (
-            <Link key={i} href={nav.href} className="text-white/75 hover:text-blue-500 tr text-sm">
+            <Link
+              key={i}
+              href={nav.href}
+              className="text-white/75 hover:text-green-400 tr text-sm"
+            >
               {nav.name}
             </Link>
           ))}
         </div>
       </div>
-      <span className="text-center mt-10 block text-sm font-science text-white/40">
-        All rights reserved to &copy;2024 algostar.dev
+      <span className="text-center mt-10 block text-sm text-white/40">
+        All rights reserved to &copy;{new Date().getFullYear()} Shahtaz Rahman
       </span>
     </footer>
   );

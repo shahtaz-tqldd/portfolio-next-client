@@ -13,8 +13,8 @@ const Features = () => {
         {features?.map((feature, index) => (
           <AOS key={index} delay={0.1 * index}>
             <div
-              className={`hover:-translate-y-2 tr  px-8 pt-14 pb-5 rounded-2xl ${
-                index === 1 ? "bg-green-500/10" : "bg-white/5"
+              className={`p-8 pb-4 rounded-2xl ${
+                index === 1 ? "bg-green-500/20" : "bg-white/5"
               }`}
             >
               <AOS key={index} delay={0.2 * index}>

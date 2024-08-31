@@ -1,9 +1,7 @@
-import ShinyButton from "@/components/magicui/shiny-button";
-import { Mail, Phone } from "lucide-react";
 import React from "react";
-import SocialMedia from "./social-media";
-import PrimaryButton from "@/components/buttons/primary-button";
 import MainButton from "@/components/buttons/main-button";
+import SocialMedia from "./social-media";
+import { Mail, Phone } from "lucide-react";
 
 const ContactMe = () => {
   return (
@@ -16,14 +14,14 @@ const ContactMe = () => {
             I can shape your ideas into digital presence through developing
             seamless web application
           </p>
-          <div className="mt-20 flex flex-col gap-6">
+          <div className="mt-12 flex flex-col gap-8">
             <div>
               <p className="text-white/60 mb-1 uppercase ml-12">Reach out at</p>
               <div className="flex items-center gap-3">
                 <div className="h-9 w-9 rounded-full bg-white/20 center">
                   <Phone className="h-4" />
                 </div>
-                <span className="text-lg text-white font-science">
+                <span className="text-lg text-white font-science pt-1">
                   {" "}
                   +8801521305382
                 </span>
@@ -31,30 +29,27 @@ const ContactMe = () => {
             </div>
             <div>
               <p className="text-white/60 mb-1 uppercase ml-12">
-                Directly Email
+                Hop Into My Email
               </p>
               <div className="flex items-center gap-3">
                 <div className="h-9 w-9 rounded-full bg-white/20 center">
                   <Mail className="h-4" />
                 </div>
-                <span className="text-lg text-white font-science">
+                <span className="text-lg text-white font-science pt-1">
                   {" "}
                   shahtaz67@gmail.com
                 </span>
               </div>
             </div>
           </div>
-          <div className="mt-40">
+          <div className="mt-20">
             <SocialMedia />
           </div>
         </div>
 
         {/* contact form */}
-        <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
-          <h2 className="text-2xl font-bold">Please Fill out the Form</h2>
-          <p className="text-white/50 mt-2 mb-8">
-            Your enquary and project details is completly safe and sound
-          </p>
+        <div className="bg-white/5 border border-white/10 p-8 rounded-xl h-fit">
+          <h2 className="text-2xl font-bold mb-5">Please Fill out the Form</h2>
           <form className="flex flex-col gap-5">
             <div>
               <h3 className="text-white/80 text-sm mb-2">Your Name</h3>
@@ -80,7 +75,7 @@ const ContactMe = () => {
                 className="h-60 bg-white/15 py-3 px-4 rounded-lg w-full outline-none border border-white/20 focus:border-green-200"
               />
             </div>
-            <div className="mt-4 flex justify-end">
+            <div className="mt-2 flex justify-end">
               <MainButton>Send Message</MainButton>
             </div>
           </form>

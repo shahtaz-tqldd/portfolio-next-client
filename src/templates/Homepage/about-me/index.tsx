@@ -17,11 +17,6 @@ const AboutMe = () => {
               alt="shahtaz rahman"
             />
           </AOS>
-          <AOS direction="left">
-            <h2 className="absolute -right-[20%] text-nowrap -mt-48 text-6xl font-semibold font-science text-white/90">
-              Shahtaz Rahman
-            </h2>
-          </AOS>
         </div>
         <div>
           <AOS delay={0.25}>
