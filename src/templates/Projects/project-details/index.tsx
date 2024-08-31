@@ -5,7 +5,7 @@ import { useRouter, useParams } from "next/navigation";
 import { projects } from "../common";
 import { X } from "lucide-react";
 
-const imgFallback = "https://img.png"
+const imgFallback = "https://img.png";
 const ProjectDetails = () => {
   const { name } = useParams();
   const router = useRouter();
@@ -38,7 +38,7 @@ const ProjectDetails = () => {
         </div>
         <div>
           <Image
-            src={selectedProject?.img || {imgFallback}}
+            src={selectedProject?.img || imgFallback}
             className="w-full h-[480px] object-cover rounded-2xl border border-white/10"
             height={400}
             width={600}
