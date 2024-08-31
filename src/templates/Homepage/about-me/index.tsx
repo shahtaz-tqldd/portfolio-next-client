@@ -43,7 +43,7 @@ const AboutMe = () => {
               My ability to work seamlessly with cross-functional teams,
               combined with foundational knowledge of data structures and
               algorithms, allows me to deliver high-quality products that meet
-              and exceed users' expectations.
+              and exceed users&apos; expectations.
             </p>
           </AOS>
           <div className="mt-8 flex gap-8">
