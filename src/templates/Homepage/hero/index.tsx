@@ -11,7 +11,7 @@ import SecondaryButton from "@/components/buttons/secondary-button";
 const Hero = () => {
   const greetings = "Hey, I'm Shahtaz Rahman";
   return (
-    <section id="home" className="center min-h-[90vh]">
+    <section id="home" className="relative center min-h-[90vh]">
       <div className="container flex flex-col items-center">
         <AOS delay={0.25} direction="none">
           <Image
@@ -60,7 +60,7 @@ const Hero = () => {
         cy={1}
         cr={1}
         className={cn(
-          "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] "
+          "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] top-3"
         )}
       />
       <DotPattern
