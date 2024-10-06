@@ -3,6 +3,7 @@ import ProjectCard from "@/templates/Projects/components/project-card";
 import { projects } from "@/templates/Projects/common";
 import AOS from "@/components/ui/aos";
 import AccentButton from "@/components/buttons/accent-button";
+import { ProjectData } from "@/templates/Projects/interface";
 
 const Projects = () => {
   return (
@@ -11,7 +12,7 @@ const Projects = () => {
         Featured Projects
       </h2>
       <div className="grid grid-cols-3 gap-5">
-        {projects?.map((project, index) => (
+        {projects?.map((project: ProjectData, index: number) => (
           <AOS key={index} delay={index * 0.1}>
             <ProjectCard data={project} index={index} />
           </AOS>

@@ -9,20 +9,11 @@ import { X } from "lucide-react";
 
 import ProjectDetails from ".";
 import { ReactNode } from "react";
-import { StaticImageData } from "next/image";
+import { ProjectData } from "../interface";
 
 interface IProjectDrawer {
   children: ReactNode;
-  project: {
-    name: string;
-    description: string;
-    img: StaticImageData | string;
-    tags: string[];
-    projectType: string;
-    techs: string[];
-    features: string;
-    screens: string[];
-  };
+  project: ProjectData;
 }
 
 export function ProjectDetailsDrawer({ children, project }: IProjectDrawer) {

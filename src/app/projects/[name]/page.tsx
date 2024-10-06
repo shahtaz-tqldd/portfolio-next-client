@@ -1,19 +1,11 @@
 import type { NextPage } from "next";
 import ProjectDetails from "@/templates/Projects/project-details";
 import { StaticImageData } from "next/image";
+import { ProjectData } from "@/templates/Projects/interface";
 
 // Define the project type
 interface IProjectDetails {
-  project: {
-    name: string;
-    description: string;
-    img: StaticImageData | string;
-    tags: string[];
-    projectType: string;
-    techs: string[];
-    features: string;
-    screens: string[];
-  };
+  project: ProjectData;
 }
 
 // Mock project data to pass as a prop

@@ -1,26 +1,26 @@
 "use client";
 import React from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { GoArrowUpRight } from "react-icons/go";
 import TextButton from "@/components/buttons/text-button";
+import { ProjectData } from "../interface";
 import "./styles.css";
 
 interface IProjectDetails {
-  project: {
-    name: string;
-    description: string;
-    img: StaticImageData | string;
-    tags: string[];
-    projectType: string;
-    techs: string[];
-    features: string;
-    screens: string[];
-  };
+  project: ProjectData;
 }
 
 const ProjectDetails = ({ project }: IProjectDetails) => {
-  const { name, description, img, tags, projectType, techs, features, screens } =
-    project;
+  const {
+    name,
+    description,
+    img,
+    tags,
+    projectType,
+    techs,
+    features,
+    screens,
+  } = project;
   return (
     <section className="container">
       <div className="container py-12">
@@ -84,7 +84,7 @@ const ProjectDetails = ({ project }: IProjectDetails) => {
           <div
             className="feature_des"
             dangerouslySetInnerHTML={{
-              __html: features,
+              __html: features || "",
             }}
           ></div>
         </div>
@@ -95,7 +95,12 @@ const ProjectDetails = ({ project }: IProjectDetails) => {
         </h2>
         <div className="grid grid-cols-3 gap-5">
           {screens?.map((screen: string, index: number) => (
-            <img key={index} src={screen} className="w-full h-fill object-cover" alt="" />
+            <img
+              key={index}
+              src={screen}
+              className="w-full h-fill object-cover"
+              alt=""
+            />
           ))}
         </div>
       </div>

@@ -1,20 +1,11 @@
 import AOS from "@/components/ui/aos";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import React from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { ProjectDetailsDrawer } from "../project-details/project-drawer";
-
-interface ProjectCardData {
-  name: string;
-  img: StaticImageData;
-  description: string;
-  tags?: string[];
-  projectType: string;
-  techs?: string[];
-}
-
+import { ProjectData } from "../interface";
 interface ProjectCardProps {
-  data: ProjectCardData;
+  data: ProjectData;
   index: number;
 }
 
