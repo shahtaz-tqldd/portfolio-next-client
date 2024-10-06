@@ -18,8 +18,8 @@ const Homepage = () => {
       <TechStack />
       <WorkExperiences />
       <AboutMe />
-      <ContactMe />
       <Blogs />
+      <ContactMe />
     </Layout>
   );
 };

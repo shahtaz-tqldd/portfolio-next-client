@@ -1,0 +1,13 @@
+.feature_des {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 64px;
+  }
+  .feature_des>div> h2 {
+    font-size: 24px;
+    color: #efefef;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  

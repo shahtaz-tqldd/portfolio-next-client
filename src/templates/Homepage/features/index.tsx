@@ -2,32 +2,38 @@
 import React from "react";
 import { features } from "./common";
 import AOS from "@/components/ui/aos";
+import { BorderBeam } from "@/components/magicui/border-beam";
 
 const Features = () => {
   return (
     <section className="container py-20">
-      <h2 className="text-center text-7xl font-science mb-16">
-        My Strong Suit
+      <h2 className="text-center text-5xl font-science mb-16">
+        My Expertise
       </h2>
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-3 gap-6 overflow-hidden">
         {features?.map((feature, index) => (
           <AOS key={index} delay={0.1 * index}>
             <div
-              className={`p-8 pb-4 rounded-2xl ${
-                index === 1 ? "bg-green-500/20" : "bg-white/5"
-              }`}
+              className={`p-6 pb-4 rounded-xl relative group bg-white/[0.03] hover:bg-white/5 tr group`}
             >
               <AOS key={index} delay={0.2 * index}>
-                <div>
-                  <feature.icon className="h-12 w-12 text-green-300 mb-4" />
+                <div className="mb-4">
+                  <img src={feature.img} className="h-20 w-20 object-contain" alt="" />
+                  {/* <feature.icon className="h-12 w-12 text-primary mb-4" /> */}
                 </div>
-                <h2 className="text-2xl font-bold mb-3 font-science">
+                <h2 className="text-2xl font-semibold -mb-2 font-science">
                   {feature.title}
                 </h2>
               </AOS>
               <AOS key={index} delay={0.25 * index}>
-                <p className="text-white/50">{feature.text}</p>
+                <p className="text-white/50 group-hover:text-white/70 tr">{feature.text}</p>
               </AOS>
+              <BorderBeam
+                size={250}
+                duration={12}
+                delay={index * 9}
+                className=""
+              />
             </div>
           </AOS>
         ))}

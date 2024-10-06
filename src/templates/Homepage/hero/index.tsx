@@ -9,17 +9,17 @@ import PrimaryButton from "@/components/buttons/primary-button";
 import SecondaryButton from "@/components/buttons/secondary-button";
 
 const Hero = () => {
-  const greetings = "Hi there, Good Morning";
+  const greetings = "Hey, I’m Shahtaz Rahman";
   return (
-    <section id="home" className="container pt-12 pb-16">
-      <div className="flex flex-col items-center">
+    <section id="home" className="center min-h-[90vh]">
+      <div className="container flex flex-col items-center">
         <AOS delay={0.25} direction="none">
           <Image
             src={profile}
             height={500}
             width={500}
-            className="h-32 w-32 rounded-full object-contain border border-white/20 bg-purple-500/10"
-            alt=""
+            className="h-32 w-32 rounded-full object-contain border border-primary/15 bg-[#151515] z-10 relative"
+            alt="Shahtaz Rahman"
           />
         </AOS>
 
@@ -30,10 +30,10 @@ const Hero = () => {
 
         <AOS delay={0.25}>
           <p className="text-center text-lg text-white/60 mt-10 max-w-5xl">
-            I am a Software Developer proficient in web application development,
-            specializing in both frontend and backend. I use React and Next JS
-            to create dynamic, responsive interfaces and I can develop robust
-            and optimized backend applications using Node JS or Django
+            I’m a software developer who loves turning ideas into reality
+            through code. Whether it's crafting sleek, interactive interfaces
+            with React and Next.js or building powerful, scalable backends using
+            Node.js or Django—I’ve got you covered!
           </p>
         </AOS>
         <AOS delay={0.5}>
@@ -42,10 +42,10 @@ const Hero = () => {
               href="https://drive.google.com/file/d/1lV9dIwZU1Ede97Fao-GY1s3EjLPyjvO-/view"
               target="__blank"
             >
-              <PrimaryButton>Get My Resume</PrimaryButton>
+              <PrimaryButton>Check Out My Resume</PrimaryButton>
             </a>
             <a href="#skills">
-              <SecondaryButton>My Expertise</SecondaryButton>
+              <SecondaryButton>Explore My Skills</SecondaryButton>
             </a>
           </div>
         </AOS>
@@ -61,6 +61,16 @@ const Hero = () => {
         cr={1}
         className={cn(
           "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] "
+        )}
+      />
+      <DotPattern
+        width={32}
+        height={32}
+        cx={1}
+        cy={1}
+        cr={1}
+        className={cn(
+          "[mask-image:linear-gradient(to_top_left,white,transparent,transparent)] "
         )}
       />
     </section>

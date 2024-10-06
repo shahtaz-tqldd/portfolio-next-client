@@ -1,15 +1,16 @@
 import AOS from "@/components/ui/aos";
 import React from "react";
 import { workExperiences } from "./common";
+import { GoArrowUpRight } from "react-icons/go";
 
 const WorkExperiences = () => {
   return (
     <section id="experiences" className="container pt-28 pb-10">
-      <h2 className="text-center text-7xl font-science mb-16">
+      <h2 className="text-center text-5xl font-science mb-10">
         Work Experiences
       </h2>
 
-      <div className="flex flex-col gap-20">
+      <div className="flex flex-col">
         {workExperiences?.map(
           (
             {
@@ -24,26 +25,26 @@ const WorkExperiences = () => {
             },
             index
           ) => (
-            <div key={index} className="flex gap-10">
+            <div key={index} className="flex gap-6 border-b border-b-white/10 py-12">
               <div className="w-2/5">
                 <AOS direction="right">
                   <img src={logo} className={logoClass} />
-                  <h2 className="mt-4 font-science font-medium">
+                  <h2 className="mt-4">
                     {designation} at {companyName}
                   </h2>
-                  <p className="text-sm text-white/50">{duration}</p>
+                  <p className="text-sm text-white/50 mt-1">{duration}</p>
                 </AOS>
               </div>
               <div className="w-3/5">
                 <AOS direction="left">
-                  <p className="text-white/60">{about}</p>
+                  <p className="text-white/65">{about}</p>
                   <div className="mt-8">
-                    <h2 className="text-green-300">Tech Stack</h2>
-                    <div className="mt-2 flex flex-wrap gap-x-6 gap-y-2">
+                    <h2 className="text-primary">Tech Stack</h2>
+                    <div className="mt-2 flex flex-wrap gap-2">
                       {techs.map(({ icon: Icon, name }, index) => (
                         <div
                           key={index}
-                          className="flex items-center gap-2 text-sm text-white/80"
+                          className="flex items-center gap-2 text-sm text-white/80 bg-white/10 px-3 py-1 rounded-full"
                         >
                           <Icon />
                           {name}
@@ -52,16 +53,17 @@ const WorkExperiences = () => {
                     </div>
                   </div>
                   <div className="mt-8 ">
-                    <h2 className="text-green-300">Projects</h2>
-                    <div className="mt-2 flex flex-wrap gap-x-6 gap-y-4">
+                    <h2 className="text-primary">Projects</h2>
+                    <div className="mt-2 flex flex-wrap gap-2">
                       {projects.map(({ name, link }, index) => (
                         <a
                           key={index}
                           href={link}
                           target={link ? "_blank" : ""}
-                          className="text-sm text-white/80"
+                          className="fl gap-1.5 text-sm text-white/80 py-2.5 pr-3 pl-4 rounded-full border border-white/10 bg-white/5 hover:shadow-[0_0_16px_1px_rgba(118,149,255,0.8)] tr"
                         >
-                          {name}
+                          {name} 
+                          <GoArrowUpRight className="text-base mt-0.5"/>
                         </a>
                       ))}
                     </div>

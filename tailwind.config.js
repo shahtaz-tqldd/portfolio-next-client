@@ -78,6 +78,11 @@ module.exports = {
             opacity: 0,
           },
         },
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -89,11 +94,14 @@ module.exports = {
         marquee: "marquee var(--duration) linear infinite",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
         meteor: "meteor 5s linear infinite",
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
       },
       colors: {
-        primary: "",
+        primary: "#3FA2F6",
         secondary: "",
         accent: "#0e0c15",
+        dark: "#0e0c15",
+        white: "#fefefe",
       },
     },
   },

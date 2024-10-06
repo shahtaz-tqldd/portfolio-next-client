@@ -36,7 +36,7 @@ const BlogDetails = () => {
         <h2 className="mt-6 text-5xl font-science">{selectedBlog?.title}</h2>
         <div className="flex gap-5 mt-4">
           {selectedBlog?.tags?.map((tag, i) => (
-            <span key={i} className="text-sm text-green-300">
+            <span key={i} className="text-sm text-primary">
               {tag}
             </span>
           ))}

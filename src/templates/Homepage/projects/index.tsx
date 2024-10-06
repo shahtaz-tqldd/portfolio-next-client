@@ -1,17 +1,16 @@
 import React from "react";
-import ProjectCard from "@/templates/Projects/project-card";
-import ShinyButton from "@/components/magicui/shiny-button";
+import ProjectCard from "@/templates/Projects/components/project-card";
 import { projects } from "@/templates/Projects/common";
 import AOS from "@/components/ui/aos";
 import AccentButton from "@/components/buttons/accent-button";
 
 const Projects = () => {
   return (
-    <section id="projects" className="container pt-28 pb-10">
-      <h2 className="text-center text-7xl font-science mb-16">
+    <section id="projects" className="container pt-24 pb-10">
+      <h2 className="text-center text-5xl font-science mb-16">
         Featured Projects
       </h2>
-      <div className="grid grid-cols-3 gap-10">
+      <div className="grid grid-cols-3 gap-5">
         {projects?.map((project, index) => (
           <AOS key={index} delay={index * 0.1}>
             <ProjectCard data={project} index={index} />

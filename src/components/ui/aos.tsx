@@ -16,29 +16,19 @@ const AOS: React.FC<AOSProps> = ({
   duration = 0.4,
   delay = 0,
   direction = "up",
-  className="",
+  className = "",
 }) => {
   const controls = useAnimation();
   const scrollRef = useRef<HTMLDivElement | null>(null);
-  const [isMounted, setIsMounted] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false); // Track if animation has already happened
 
   useEffect(() => {
-    setIsMounted(true);
-
-    return () => {
-      setIsMounted(false); 
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!isMounted) return; 
-
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !hasAnimated) {
+          // Trigger the animation only the first time
           controls.start("show");
-        } else {
-          controls.start("hidden");
+          setHasAnimated(true); // Mark that animation has completed
         }
       });
     };
@@ -57,7 +47,7 @@ const AOS: React.FC<AOSProps> = ({
         observer.unobserve(current);
       }
     };
-  }, [controls, isMounted]);
+  }, [controls, hasAnimated]);
 
   return (
     <motion.div

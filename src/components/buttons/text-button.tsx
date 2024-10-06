@@ -31,7 +31,7 @@ interface ShinyButtonProps {
   filled?: boolean;
   link?: string;
 }
-const AccentButton = ({
+const TextButton = ({
   children = "Button Text",
   className,
   filled = false,
@@ -49,7 +49,7 @@ const AccentButton = ({
     <motion.button
       {...animationProps}
       className={cn(
-        "group relative overflow-hidden rounded-full bg-transparent py-3 px-5 text-sm transition-all w-48 border border-primary/20 hover:shadow-[0_0_16px_1px_rgba(118,149,255,0.8)] tr",
+        "group relative overflow-hidden rounded-full bg-transparent transition-all tr",
         filled && "bg-white",
         className
       )}
@@ -71,9 +71,9 @@ const AccentButton = ({
         }}
         className="absolute inset-0 z-10 block rounded-[inherit] bg-[linear-gradient(-75deg,hsl(var(--primary)/10%)_calc(var(--x)+20%),hsl(var(--primary)/50%)_calc(var(--x)+25%),hsl(var(--primary)/10%)_calc(var(--x)+100%))] p-px"
       ></span>
-      <span className="z-0 absolute bottom-0 left-0 h-48 w-full origin-bottom translate-y-full transform overflow-hidden rounded-full bg-primary/20 transition-all duration-300 ease-out group-hover:translate-y-20"></span>
+      
     </motion.button>
   );
 };
 
-export default AccentButton;
+export default TextButton;

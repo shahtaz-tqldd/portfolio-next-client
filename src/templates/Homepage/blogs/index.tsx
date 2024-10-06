@@ -1,37 +1,53 @@
 import React from "react";
 import { blogs } from "./common";
-import Image from "next/image";
 import AOS from "@/components/ui/aos";
 import Link from "next/link";
+import { CalendarDays } from "lucide-react";
 
 const Blogs = () => {
   return (
-    <section id="blogs" className="container pt-28 pb-10">
-      <h2 className="text-center text-7xl font-science mb-16">
-        Blogs and Aritcles
-      </h2>
-
-      <div className="mt-20 grid grid-cols-3 gap-6">
+    <section id="blogs" className="container pt-24 pb-10">
+      <h2 className="text-center text-5xl font-science mb-16">My Write Up</h2>
+      <div className="mt-20 grid grid-cols-4 gap-4">
         {blogs?.map(({ img, title, tags, published }, index) => (
-          <Link href={`/blogs/${title.split(" ").map(word => word.toLowerCase()).join("-")}`} key={index} className="group">
-            <AOS delay={(index + 1) * 0.25}>
-              <div className="h-[260px] mb-10 overflow-hidden rounded-2xl">
+          <Link
+            key={index}
+            href={`/blogs/${title
+              .split(" ")
+              .map((word) => word.toLowerCase())
+              .join("-")}`}
+          >
+            <AOS
+              delay={(index + 1) * 0.15}
+              className="group bg-white/[0.03] hover:bg-white/5 tr p-3.5 h-[344px] rounded-xl"
+            >
+              <div className="h-44 mb-10 overflow-hidden rounded-lg">
                 <img
                   src={img}
                   alt=""
-                  className="rounded-2xl h-full w-full object-cover group-hover:scale-105 tr"
+                  className="rounded-lg h-full w-full object-cover group-hover:scale-105 tr"
                 />
               </div>
-              <AOS delay={(index + 1) * 0.1}>
-                <p className="text-sm text-white/50">{published}</p>
+              <AOS delay={(index + 1) * 0.20}>
+                <div className="fl gap-2 -mb-2 text-white/50">
+                  <CalendarDays className="h-3.5 w-3.5 mb-[1px]" />
+                  <span className="text-xs">{published}</span>
+                </div>
               </AOS>
               <AOS delay={(index + 1) * 0.25}>
-                <h2 className="text-2xl text-white/75 group-hover:text-white tr font-medium font-science">{title}</h2>
+                <h2 className="font-semibold text-white/75 group-hover:text-white tr">
+                  {title}
+                </h2>
               </AOS>
-              <AOS delay={(index + 1) * 0.4}>
-                <div className="flex flex-wrap gap-4 text-xs text-white/60 group-hover:text-green-300 tr">
+              <AOS delay={(index + 1) * 0.30} className="-mb-10">
+                <div className="flex flex-wrap gap-1 text-xs  text-white/60 group-hover:text-primary tr">
                   {tags?.map((tag, i) => (
-                    <span key={i}>{tag}</span>
+                    <span
+                      key={i}
+                      className="bg-white/10 py-1 px-2.5 rounded-full"
+                    >
+                      {tag}
+                    </span>
                   ))}
                 </div>
               </AOS>

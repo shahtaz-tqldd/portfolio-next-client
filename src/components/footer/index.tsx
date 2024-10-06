@@ -1,6 +1,4 @@
 import React from "react";
-
-import SparklesText from "../magicui/sparkles-text";
 import { navItems } from "@/assets/data/navLinks";
 import Link from "next/link";
 
@@ -11,8 +9,9 @@ const Footer = () => {
         <div>
           <h2 className="font-science tracking-wider">FYI</h2>
           <p className="text-white/60 mt-3 text-sm max-w-[500px]">
-            This portfolio site is designed by myself slightly on Figma and then
-            developed with Next JS, TypeScript, Tailwind CSS and Magic UI
+            This portfolio is a personal creation, starting with a custom design
+            on Figma and developed using Next.js, TypeScript, and Tailwind CSS.
+            With a blend of ShadCN, Framer Motion, and Magic UI.
           </p>
         </div>
         <div className="flex items-center gap-10">
@@ -20,7 +19,7 @@ const Footer = () => {
             <Link
               key={i}
               href={nav.href}
-              className="text-white/75 hover:text-green-400 tr text-sm"
+              className="text-white/75 hover:text-primary tr text-sm"
             >
               {nav.name}
             </Link>

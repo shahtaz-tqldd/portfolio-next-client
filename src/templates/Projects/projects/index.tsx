@@ -1,13 +1,12 @@
 import React from "react";
-import ProjectCard from "@/templates/Projects/project-card";
-import ShinyButton from "@/components/magicui/shiny-button";
+import ProjectCard from "../components/project-card";
 import { projects } from "../common";
 
 const Projects = () => {
   return (
-    <section id="projects" className="container py-20">
-      <h2 className="text-center text-7xl font-science mb-16">Projects</h2>
-      <div className="grid grid-cols-3 gap-10">
+    <section id="projects" className="container pt-10 pb-24">
+      <h2 className="text-center text-5xl font-science mb-10">Featured Projects</h2>
+      <div className="grid grid-cols-3 gap-5">
         {projects?.map((project, index) => (
           <ProjectCard key={index} data={project} index={index} />
         ))}
