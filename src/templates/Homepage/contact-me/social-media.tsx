@@ -34,7 +34,10 @@ export default function SocialMedia() {
         >
           <FaFacebookF className="text-blue-500" />
         </DockIcon>
-        <DockIcon className="bg-black/10 dark:bg-white/10 p-2">
+        <DockIcon
+          redirectLink="https://wa.me/8801521305382/"
+          className="bg-black/10 dark:bg-white/10 p-2"
+        >
           <FaWhatsapp className="text-green-400" />
         </DockIcon>
       </Dock>

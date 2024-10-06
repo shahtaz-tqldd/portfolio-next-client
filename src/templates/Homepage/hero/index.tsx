@@ -9,7 +9,7 @@ import PrimaryButton from "@/components/buttons/primary-button";
 import SecondaryButton from "@/components/buttons/secondary-button";
 
 const Hero = () => {
-  const greetings = "Hey, I’m Shahtaz Rahman";
+  const greetings = "Hey, I'm Shahtaz Rahman";
   return (
     <section id="home" className="center min-h-[90vh]">
       <div className="container flex flex-col items-center">
@@ -30,10 +30,10 @@ const Hero = () => {
 
         <AOS delay={0.25}>
           <p className="text-center text-lg text-white/60 mt-10 max-w-5xl">
-            I’m a software developer who loves turning ideas into reality
-            through code. Whether it's crafting sleek, interactive interfaces
-            with React and Next.js or building powerful, scalable backends using
-            Node.js or Django—I’ve got you covered!
+            I&apos;m a software developer who loves turning ideas into reality
+            through code. Whether it&apos;s crafting sleek, interactive interfaces
+            with React, Next.js, Angular or building a robust, scalable backend using
+            Node.js or Django—I&apos;ve got you covered!
           </p>
         </AOS>
         <AOS delay={0.5}>
