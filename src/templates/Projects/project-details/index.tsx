@@ -20,6 +20,7 @@ const ProjectDetails = ({ project }: IProjectDetails) => {
     techs,
     features,
     screens,
+    liveLink,
   } = project;
   return (
     <section className="container">
@@ -40,12 +41,14 @@ const ProjectDetails = ({ project }: IProjectDetails) => {
             </div>
 
             <div className="mt-12 fl">
-              <TextButton>
-                <div className="fl gap-2 justify-center">
-                  <span>Live Link</span>
-                  <GoArrowUpRight className="text-lg" />
-                </div>
-              </TextButton>
+              <a href={liveLink || ""} target="__blank">
+                <TextButton>
+                  <div className="fl gap-2 justify-center">
+                    <span>Live Link</span>
+                    <GoArrowUpRight className="text-lg" />
+                  </div>
+                </TextButton>
+              </a>
             </div>
           </div>
           <div>

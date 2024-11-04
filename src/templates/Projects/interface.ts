@@ -9,4 +9,5 @@ export interface ProjectData {
   techs?: string[];
   features?: string;
   screens?: string[];
+  liveLink?: string;
 }
