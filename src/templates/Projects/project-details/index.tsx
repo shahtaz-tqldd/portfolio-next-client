@@ -39,7 +39,9 @@ const ProjectDetails = ({ project }: IProjectDetails) => {
             <h2 className="md:text-4xl text-3xl text-white font-semibold font-science">
               {name}
             </h2>
-            <p className="mt-3 text-white/65 md:text-base text-sm">{description}</p>
+            <p className="mt-3 text-white/65 md:text-base text-sm">
+              {description}
+            </p>
             <div className="flex flex-wrap gap-4 mt-5 text-yellow-500">
               {tags?.map((tag: string, i: number) => (
                 <span key={i} className="text-sm">
@@ -106,9 +108,11 @@ const ProjectDetails = ({ project }: IProjectDetails) => {
         </h2>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
           {screens?.map((screen: string, index: number) => (
-            <div className="md:h-[360px] h-[240px] w-full bg-gray-100 p-6 center overflow-hidden relative group">
+            <div
+              key={index}
+              className="md:h-[360px] h-[240px] w-full bg-gray-100 p-6 center overflow-hidden relative group"
+            >
               <img
-                key={index}
                 src={screen}
                 className="w-full h-fill object-contain shadow-lg relative z-10 group-hover:scale-105 tr"
                 alt=""
