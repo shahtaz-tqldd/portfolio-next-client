@@ -68,7 +68,7 @@ const Navbar = () => {
     }
   }, [pathname]);
   return (
-    <nav className="py-3 sticky top-0 bg-[#0e0c15] border-b border-b-white/10 z-50">
+    <nav className="py-3 sticky top-0 bg-[#0e0c15] border-b border-b-white/10 z-50 md:block hidden">
       <div className="container flex items-center justify-between">
         <Logo />
 

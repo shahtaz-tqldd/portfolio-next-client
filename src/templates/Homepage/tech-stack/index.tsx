@@ -9,8 +9,8 @@ const TechStack = () => {
     <section id="skills" className="pt-28 pb-10">
       <div className="max-w-5xl mx-auto">
         <AOS>
-          <h2 className="text-center text-5xl font-science">My Tech Skills</h2>
-          <p className="text-white/65 text-center mt-8 mb-10 text-lg">
+          <h2 className="text-center md:text-5xl text-3xl font-science mb-16">My Tech Skills</h2>
+          <p className="text-white/65 text-center mt-8 mb-10 md:text-lg text-sm">
             Over the years, I&apos;ve immersed myself in various technologies,
             constantly pushing to write optimized code that powers dynamic
             frontends and robust backends. Below is a snapshot of the tools that I
@@ -22,7 +22,7 @@ const TechStack = () => {
           {techs?.map(({ icon: Icon, name }, index) => (
             <AOS
               key={index}
-              className="flex items-center gap-2.5 text-primary bg-white/5 py-3 px-6 rounded-full hover:shadow-[0_0_16px_1px_rgba(118,149,255,0.8)] tr cursor-pointer"
+              className="md:text-base text-xs flex items-center gap-2.5 text-primary bg-white/5 md:py-3 py-2 md:px-6 px-3.5 rounded-full hover:shadow-[0_0_16px_1px_rgba(118,149,255,0.8)] tr cursor-pointer"
               delay={index * 0.05}
             >
               <Icon />

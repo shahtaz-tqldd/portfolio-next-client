@@ -6,7 +6,7 @@ import { GoArrowUpRight } from "react-icons/go";
 const WorkExperiences = () => {
   return (
     <section id="experiences" className="container pt-28 pb-10">
-      <h2 className="text-center text-5xl font-science mb-10">
+      <h2 className="text-center md:text-5xl text-3xl font-science mb-10">
         Work Experiences
       </h2>
 
@@ -25,8 +25,8 @@ const WorkExperiences = () => {
             },
             index
           ) => (
-            <div key={index} className="flex gap-6 border-b border-b-white/10 py-12">
-              <div className="w-2/5">
+            <div key={index} className="flex lg:flex-row flex-col gap-6 border-b border-b-white/10 py-12">
+              <div className="lg:w-2/5 w-full -ml-4">
                 <AOS direction="right">
                   <img src={logo} className={logoClass} />
                   <h2 className="mt-4">
@@ -35,7 +35,7 @@ const WorkExperiences = () => {
                   <p className="text-sm text-white/50 mt-1">{duration}</p>
                 </AOS>
               </div>
-              <div className="w-3/5">
+              <div className="lg:w-3/5 w-full">
                 <AOS direction="left">
                   <p className="text-white/65">{about}</p>
                   <div className="mt-8">

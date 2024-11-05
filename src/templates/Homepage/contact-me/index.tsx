@@ -6,9 +6,9 @@ import PrimaryButton from "@/components/buttons/primary-button";
 const ContactMe = () => {
   return (
     <section id="contact" className="container pt-24 pb-10">
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
         <div>
-          <h2 className="text-left text-5xl font-science">Let&apos;s Connect!</h2>
+          <h2 className="text-left md:text-5xl text-3xl font-science">Let&apos;s Connect!</h2>
           <p className="mt-5 text-white/60">
             Got an awesome project in mind? Need help bringing your ideas to
             life? I&apos;m your go-to software developer for building seamless web

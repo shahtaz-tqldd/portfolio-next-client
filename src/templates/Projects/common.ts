@@ -3,6 +3,7 @@ import boer from "@/assets/images/boer.jpg";
 import dzul from "@/assets/images/dzul.png";
 import genomart from "@/assets/images/genomart.png";
 import copycrusher from "@/assets/images/copycrusher.jpg";
+import algostar from "@/assets/images/algostar.png";
 
 export const projects = [
   {
@@ -43,17 +44,18 @@ export const projects = [
     </div>
     `,
     screens: [
-      "https://i.pinimg.com/736x/e2/5f/1d/e25f1de6d2390a82c84267d95e4b819d.jpg",
-      "https://i.pinimg.com/736x/52/a9/9b/52a99b9a6110e4d55690b6dff436c0e1.jpg",
-      "https://cdn.dribbble.com/userupload/15498067/file/original-e76c912d9c6765d337f897ebd8170ecc.jpg?resize=400x0",
-      "https://i.pinimg.com/originals/34/2c/06/342c06ab6caae0827bc903765c85562f.png",
-      "https://cdn.dribbble.com/users/118309/screenshots/12987763/dribbble_2x_4x.png",
-      "https://i.pinimg.com/736x/aa/e0/5c/aae05c3d03f4b5759c0fef9bd49c81c2.jpg",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730828424/projects-screen/dcuz2ymcymrtwjsyocge.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730828426/projects-screen/uihkuqrcsfd2ddodwblu.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730828424/projects-screen/nbdr6sohjxehocm58puz.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730828424/projects-screen/msfzurmheto1kl1q5ed3.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730828423/projects-screen/agbytsaszjq7kaje58qx.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730828423/projects-screen/bkxorjh2tzznpcnieopt.png",
     ],
   },
   {
     name: "Genomart",
-    description: "GenoMart is a comprehensive e-commerce platform that integrates customer relationship management (CRM) to streamline both product sales and customer interactions.",
+    description:
+      "GenoMart is a comprehensive e-commerce platform that integrates customer relationship management (CRM) to streamline both product sales and customer interactions.",
     tags: ["Ecommerce", "CRM", "Single Vendor"],
     img: genomart,
     projectType: "Ecommerce",
@@ -93,114 +95,164 @@ export const projects = [
     </div>
     `,
     screens: [
-      "https://i.pinimg.com/736x/e2/5f/1d/e25f1de6d2390a82c84267d95e4b819d.jpg",
-      "https://i.pinimg.com/736x/52/a9/9b/52a99b9a6110e4d55690b6dff436c0e1.jpg",
-      "https://cdn.dribbble.com/userupload/15498067/file/original-e76c912d9c6765d337f897ebd8170ecc.jpg?resize=400x0",
-      "https://i.pinimg.com/originals/34/2c/06/342c06ab6caae0827bc903765c85562f.png",
-      "https://cdn.dribbble.com/users/118309/screenshots/12987763/dribbble_2x_4x.png",
-      "https://i.pinimg.com/736x/aa/e0/5c/aae05c3d03f4b5759c0fef9bd49c81c2.jpg",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730839677/projects-screen/n2ci5odhdzvr6mywaoct.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730839676/projects-screen/ziyc5hng8sw4pxeedesh.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730839676/projects-screen/sppjeunqulmg7qyzfziq.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730839677/projects-screen/ujp6xjocopdoo65qw1uk.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730839677/projects-screen/a3cnk1hknxhdhwazulad.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730839677/projects-screen/sbeqz9x5r7fuu1symtq6.png",
     ],
   },
   {
     name: "Boer Funding",
     description:
-      "Boer funding is a trading management CRM platform, User manage their trading log, analytics of their data",
-    tags: ["CRM", "Payment Gateway", "Trading"],
+      "Boer Funding is a trading management platform that combines CRM capabilities with tools for financial tracking, analytics, and payment integration. ",
+    tags: ["CRM Platform", "Financial Trading", "Analytics & Visualization"],
     img: boer,
+    liveLink: "https://app.boerfunded.com/",
+    credentials: {
+      email: "shahtaz67@gmail.com",
+      password: "tesT@1234",
+    },
     projectType: "Trading Platform",
-    techs: ["React JS", "Node JS", "Tailwind CSS", "MongoDB"],
+    techs: [
+      "React JS",
+      "Redux",
+      "Redux toolkit",
+      "Material UI",
+      "Tailwind CSS",
+      "Stripe",
+      "Node JS",
+      "Express",
+      "MongoDB",
+    ],
     features: `
     <div>
-      <h2>New Trader's Hub</h2>
-      <p>This project empowers sellers to monetize their trading strategies, offering them on the platform for other traders to purchase. Sellers can easily create and manage their strategies, ensuring they are available for interested buyers. Each strategy can be listed with detailed descriptions and performance data, allowing buyers to make informed decisions.</p>
+      <h2>CRM Functionality</h2>
+      <p>Comprehensive CRM tools enable effective management of user profiles, account activity, and personalized communications. The CRM integration enhances customer interactions, allowing the platform to support users with tailored assistance, account history, and user-specific insights.</p>
     </div>
     <div>
-      <h2>Trading Performance Analysis</h2>
-      <p>The platform provides sellers with tools to manage a Discord bot, which helps automate communication and trading alerts directly within their community. The bot integrates seamlessly with the seller's Discord server, providing real-time updates and personalized notifications for traders who follow the strategies.</p>
+      <h2>Responsive Design</h2>
+      <p>Built with a responsive layout that adjusts seamlessly across devices, ensuring a consistent and accessible trading experience on desktops, tablets, and mobile devices. This design approach enhances usability and ensures users can engage with the platform from any device.</p>
     </div>
     <div>
-      <h2>Payment Gateway Integration</h2>
-      <p>The platform supports a variety of payment methods, including Stripe for traditional card payments and cryptocurrency for decentralized transactions. This ensures flexibility for both buyers and sellers, making the purchasing process easy and accessible globally.</p>
+      <h2>Figma to Code Conversion</h2>
+      <p>Precise implementation of Figma designs ensures that the platform's interface remains true to the original vision, maintaining a high level of visual polish and usability. This process supports quick development iterations and consistent aesthetics across all UI elements.</p>
     </div>
     <div>
-      <h2>Personalized Trading Journal</h2>
-      <p>To cater to a wider audience, the project integrates cryptocurrency payment options. Sellers can receive payments in crypto, providing a secure, fast, and decentralized way to handle transactions, further broadening the reach of their strategies in the global market.</p>
+      <h2>Stripe Payment Integration</h2>
+      <p>Seamless Stripe integration enables secure, reliable payment processing, allowing users to deposit funds and make transactions with ease. This integration supports a range of payment options, ensuring a smooth and secure financial experience for users.</p>
+    </div>
+    <div>
+      <h2>Data Visualization with Charts and Graphs</h2>
+      <p>Dynamic charts and graphs provide users with real-time data insights into market trends, account performance, and trading history. These visual tools enhance decision-making by allowing users to track progress, analyze patterns, and gain insights quickly.</p>
+    </div>
+    <div>
+      <h2>Calendar for Personalized Trading Journal</h2>
+      <p>An integrated calendar feature allows users to document trades, set reminders, and maintain a personalized trading journal. This feature supports goal tracking and progress monitoring, helping users stay organized and focused on their trading strategies.</p>
+    </div>
+    <div>
+      <h2>Security and Compliance</h2>
+      <p>Advanced security protocols ensure user data protection and platform compliance with industry standards. These features create a safe and trustworthy environment, critical for financial transactions and account management.</p>
     </div>`,
     screens: [
-      "https://i.pinimg.com/736x/e2/5f/1d/e25f1de6d2390a82c84267d95e4b819d.jpg",
-      "https://i.pinimg.com/736x/52/a9/9b/52a99b9a6110e4d55690b6dff436c0e1.jpg",
-      "https://cdn.dribbble.com/userupload/15498067/file/original-e76c912d9c6765d337f897ebd8170ecc.jpg?resize=400x0",
-      "https://i.pinimg.com/originals/34/2c/06/342c06ab6caae0827bc903765c85562f.png",
-      "https://cdn.dribbble.com/users/118309/screenshots/12987763/dribbble_2x_4x.png",
-      "https://i.pinimg.com/736x/aa/e0/5c/aae05c3d03f4b5759c0fef9bd49c81c2.jpg",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730842884/projects-screen/mx0hnjimdusgpwuohzy4.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730842882/projects-screen/xzvmzgfj71utn9f0i08u.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730842882/projects-screen/txneqe8gbh4jzkfuqu9p.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730842882/projects-screen/aintouejk13pisgnr46w.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730842882/projects-screen/kc0mvgcerldh4wp6hjcg.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730842882/projects-screen/judzcohgshitpwhkgdfk.png",
     ],
   },
   {
     name: "AMC Courier",
     description:
-      "AMC is a courier payroll management CRM designed to streamline payroll processes and enhance operational efficiency.",
-    tags: ["Payroll", "Courier", "ERP"],
+      "AMC Courier is a SaaS platform designed specifically for courier companies to streamline service management and payroll operations.",
+    tags: ["SaaS", "Courier Management", "Payroll Tracking", "Data Visualization"],
     img: amc,
     projectType: "Courier Website",
-    techs: ["React JS", "Node JS", "Tailwind CSS", "MongoDB"],
+    techs: ["React JS","TypeScript", "Shadcn", "Tailwind CSS", "Node JS", "Express", "MongoDB"],
     features: `
+   
     <div>
-      <h2>New Trader's Hub</h2>
-      <p>This project empowers sellers to monetize their trading strategies, offering them on the platform for other traders to purchase. Sellers can easily create and manage their strategies, ensuring they are available for interested buyers. Each strategy can be listed with detailed descriptions and performance data, allowing buyers to make informed decisions.</p>
+      <h2>Courier Service Management</h2>
+      <p>Comprehensive management tools for tracking packages, assigning delivery tasks, and monitoring delivery statuses. This feature streamlines courier operations, making it easy to oversee real-time progress and optimize service efficiency.</p>
     </div>
     <div>
-      <h2>Trading Performance Analysis</h2>
-      <p>The platform provides sellers with tools to manage a Discord bot, which helps automate communication and trading alerts directly within their community. The bot integrates seamlessly with the seller's Discord server, providing real-time updates and personalized notifications for traders who follow the strategies.</p>
+      <h2>Payroll and Delivery Tracking</h2>
+      <p>Automated payroll system that records employees' deliveries, calculates earnings, and generates payroll reports. This feature provides transparency for employees and simplifies payroll processing for the company.</p>
     </div>
     <div>
-      <h2>Payment Gateway Integration</h2>
-      <p>The platform supports a variety of payment methods, including Stripe for traditional card payments and cryptocurrency for decentralized transactions. This ensures flexibility for both buyers and sellers, making the purchasing process easy and accessible globally.</p>
+      <h2>PDF to JSON Data Conversion</h2>
+      <p>Converts PDF documents into structured JSON data, allowing for easy data extraction and integration with other system components. This conversion feature reduces manual data entry, improving accuracy and efficiency in handling documents.</p>
     </div>
     <div>
-      <h2>Personalized Trading Journal</h2>
-      <p>To cater to a wider audience, the project integrates cryptocurrency payment options. Sellers can receive payments in crypto, providing a secure, fast, and decentralized way to handle transactions, further broadening the reach of their strategies in the global market.</p>
-    </div>`,
+      <h2>Analytics and Charts</h2>
+      <p>Data visualization tools provide detailed insights into performance metrics, including delivery times, service efficiency, and payroll statistics. Charts and analytics enhance decision-making by enabling data-driven insights into business operations.</p>
+    </div>
+    <div>
+      <h2>Employee Management</h2>
+      <p>Maintains a comprehensive record of employee details, delivery history, and performance metrics. This feature allows for better workforce management, tracking individual contributions and supporting performance assessments.</p>
+    </div>
+    <div>
+      <h2>Secure Data Management</h2>
+      <p>Ensures secure storage and management of sensitive data, including payroll and employee records, with MongoDB. The application implements best practices for data security, making it trustworthy and compliant with industry standards.</p>
+    </div>
+`,
     screens: [
-      "https://i.pinimg.com/736x/e2/5f/1d/e25f1de6d2390a82c84267d95e4b819d.jpg",
-      "https://i.pinimg.com/736x/52/a9/9b/52a99b9a6110e4d55690b6dff436c0e1.jpg",
-      "https://cdn.dribbble.com/userupload/15498067/file/original-e76c912d9c6765d337f897ebd8170ecc.jpg?resize=400x0",
-      "https://i.pinimg.com/originals/34/2c/06/342c06ab6caae0827bc903765c85562f.png",
-      "https://cdn.dribbble.com/users/118309/screenshots/12987763/dribbble_2x_4x.png",
-      "https://i.pinimg.com/736x/aa/e0/5c/aae05c3d03f4b5759c0fef9bd49c81c2.jpg",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730842177/projects-screen/mptxvzto0ax2ybcudrza.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730842185/projects-screen/evuw1yjq1bipbqcw88s6.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730842177/projects-screen/pt3lrlre54irv2fbyrlf.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730842177/projects-screen/qfol6vgbmc2pmio6svf0.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730842182/projects-screen/nfifuo5csjjpj0jkhm0i.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730842187/projects-screen/kyjklxugj5anvklpqvfc.png",
     ],
   },
   {
-    name: "Copy Crusher",
+    name: "Algostar Portfolio",
     description:
-      "CopyCrusher is a trading strategy selling and managing platform, offering a marketplace for trading strategies.",
-    tags: ["Trading", "Marketplace", "CMS"],
-    img: copycrusher,
-    projectType: "Trading Website",
-    techs: ["React JS", "Node JS", "Tailwind CSS", "MongoDB"],
+      "Algostar is a web development agancey specialized in building CRM, ERP and SaaS. They provide you web design and development solutions.",
+    tags: ["Landing Page", "Portfolio", "Company Website"],
+    img: algostar,
+    projectType: "Portfolio Website",
+    techs: [
+      "Next JS",
+      "TypeScript",
+      "Shadcn",
+      "Framer Motion",
+      "Tailwind CSS",
+      "Magic UI",
+    ],
+    liveLink: "https://algostar.tech/",
     features: `
-    <div>
-      <h2>New Trader's Hub</h2>
-      <p>This project empowers sellers to monetize their trading strategies, offering them on the platform for other traders to purchase. Sellers can easily create and manage their strategies, ensuring they are available for interested buyers. Each strategy can be listed with detailed descriptions and performance data, allowing buyers to make informed decisions.</p>
+   <div>
+      <h2>Responsive Design</h2>
+      <p>Ensures an optimal browsing experience on all devices, adapting layouts and elements for desktops, tablets, and mobile devices. This responsive design provides a seamless and accessible experience, enhancing user engagement across platforms.</p>
     </div>
     <div>
-      <h2>Trading Performance Analysis</h2>
-      <p>The platform provides sellers with tools to manage a Discord bot, which helps automate communication and trading alerts directly within their community. The bot integrates seamlessly with the seller's Discord server, providing real-time updates and personalized notifications for traders who follow the strategies.</p>
+      <h2>ShadCN Component Library</h2>
+      <p>Utilizes ShadCN components for a clean, modern UI with consistent design elements throughout the site. This component library supports a streamlined development process while providing a professional look and feel, aligning with the brand identity.</p>
     </div>
     <div>
-      <h2>Payment Gateway Integration</h2>
-      <p>The platform supports a variety of payment methods, including Stripe for traditional card payments and cryptocurrency for decentralized transactions. This ensures flexibility for both buyers and sellers, making the purchasing process easy and accessible globally.</p>
+      <h2>Framer Motion for Interactive Animations</h2>
+      <p>Interactive animations powered by Framer Motion bring the site to life, with smooth transitions and engaging effects that enhance the user experience. These animations add depth to the design, creating a visually appealing and dynamic browsing experience.</p>
     </div>
     <div>
-      <h2>Personalized Trading Journal</h2>
-      <p>To cater to a wider audience, the project integrates cryptocurrency payment options. Sellers can receive payments in crypto, providing a secure, fast, and decentralized way to handle transactions, further broadening the reach of their strategies in the global market.</p>
-    </div>`,
-    screens: [
-      "https://i.pinimg.com/736x/e2/5f/1d/e25f1de6d2390a82c84267d95e4b819d.jpg",
-      "https://i.pinimg.com/736x/52/a9/9b/52a99b9a6110e4d55690b6dff436c0e1.jpg",
-      "https://cdn.dribbble.com/userupload/15498067/file/original-e76c912d9c6765d337f897ebd8170ecc.jpg?resize=400x0",
-      "https://i.pinimg.com/originals/34/2c/06/342c06ab6caae0827bc903765c85562f.png",
-      "https://cdn.dribbble.com/users/118309/screenshots/12987763/dribbble_2x_4x.png",
-      "https://i.pinimg.com/736x/aa/e0/5c/aae05c3d03f4b5759c0fef9bd49c81c2.jpg",
+      <h2>Email Service Integration</h2>
+      <p>Integrated email service allows visitors to easily contact the company for inquiries, feedback, or collaboration. This feature supports direct communication, enabling a quick and efficient response to client needs.</p>
+    </div>
+    <div>
+      <h2>Blog and Resources Section</h2>
+      <p>A dedicated blog or resources section allows the company to share insights, news, and updates, establishing thought leadership and engaging with the audience. This feature supports SEO efforts and keeps content fresh and relevant for returning visitors.</p>
+</div>
+`,
+screens: [
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730840954/projects-screen/equasqicslgfa0chxhxs.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730840953/projects-screen/um1fpzibv29njbey5uvw.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730840953/projects-screen/aq4ditgiwm1lhlavl8px.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730840953/projects-screen/oy4omg3nwxkuc2ldesfo.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730840953/projects-screen/czzpftigmcans3dl6rj7.png",
+      "https://res.cloudinary.com/dqyv780cz/image/upload/v1730840953/projects-screen/vuhczlwyvaf4adm6rk9w.png",
     ],
   },
 ];

@@ -6,7 +6,7 @@ import AOS from "@/components/ui/aos";
 const AboutMe = () => {
   return (
     <section id="about" className="container pt-24 pb-10">
-      <div className="grid grid-cols-2 items-center">
+      <div className="grid lg:grid-cols-2 grid-cols-1 items-center">
         <div className="relative">
           <AOS direction="right">
             <Image
@@ -21,7 +21,7 @@ const AboutMe = () => {
         </div>
         <div>
           <AOS delay={0.25}>
-            <h2 className="pt-4 text-5xl font-science mb-12">Who Am I?</h2>
+            <h2 className="pt-4 md:text-5xl text-3xl font-science mb-12">Who Am I?</h2>
           </AOS>
           <AOS delay={0.5}>
             <p className="text-white/60 text-base">
@@ -48,11 +48,11 @@ const AboutMe = () => {
           </AOS>
           <div className="mt-6 flex gap-12">
             <AOS delay={0.5}>
-              <h2 className="pt-4 text-6xl font-bold font-science">02+</h2>
+              <h2 className="pt-4 md:text-6xl text-4xl font-bold font-science">02+</h2>
               <p className="text-white/60">Years in the Game</p>
             </AOS>
             <AOS delay={0.75}>
-              <h2 className="pt-4 text-6xl font-bold font-science">24+</h2>
+              <h2 className="pt-4 md:text-6xl text-4xl font-bold font-science">24+</h2>
               <p className="text-white/60">Projects Completed</p>
             </AOS>
           </div>

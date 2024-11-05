@@ -7,10 +7,10 @@ import { BorderBeam } from "@/components/magicui/border-beam";
 const Features = () => {
   return (
     <section className="container py-20">
-      <h2 className="text-center text-5xl font-science mb-16">
+      <h2 className="text-center md:text-5xl text-3xl font-science mb-16">
         My Expertise
       </h2>
-      <div className="grid grid-cols-3 gap-6 overflow-hidden">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-6 overflow-hidden">
         {features?.map((feature, index) => (
           <AOS key={index} delay={0.1 * index}>
             <div

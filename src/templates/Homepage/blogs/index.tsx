@@ -7,8 +7,8 @@ import { CalendarDays } from "lucide-react";
 const Blogs = () => {
   return (
     <section id="blogs" className="container pt-24 pb-10">
-      <h2 className="text-center text-5xl font-science mb-16">My Write Up</h2>
-      <div className="mt-20 grid grid-cols-4 gap-4">
+      <h2 className="text-center md:text-5xl text-3xl font-science mb-16">My Write Up</h2>
+      <div className="mt-20 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
         {blogs?.map(({ img, title, tags, published }, index) => (
           <Link
             key={index}

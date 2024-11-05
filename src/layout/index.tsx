@@ -10,7 +10,7 @@ type LayoutProps = {
 };
 
 const Layout = ({ hideFooter, children }: LayoutProps) => (
-  <main className="bg-dark text-white">
+  <main className="bg-dark text-white md:px-0 px-2">
     <Navbar />
     {children}
     <div className="fixed bottom-10 right-10">

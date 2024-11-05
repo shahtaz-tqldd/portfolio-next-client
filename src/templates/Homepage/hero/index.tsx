@@ -18,18 +18,18 @@ const Hero = () => {
             src={profile}
             height={500}
             width={500}
-            className="h-32 w-32 rounded-full object-contain border border-primary/15 bg-[#151515] z-10 relative"
+            className="h-32 w-32 rounded-full object-contain border border-primary/15 bg-[#151515] z-10 relative md:mt-0 mt-12"
             alt="Shahtaz Rahman"
           />
         </AOS>
 
         <WordPullUp
-          className="text-5xl font-bold tracking-[0.1rem] font-science mt-6"
+          className="md:text-5xl text-3xl font-bold tracking-[0.1rem] font-science mt-6"
           words={greetings}
         />
 
         <AOS delay={0.25}>
-          <p className="text-center text-lg text-white/60 mt-10 max-w-5xl">
+          <p className="text-center md:text-lg text-sm text-white/60 mt-10 max-w-5xl">
             I&apos;m a software developer who loves turning ideas into reality
             through code. Whether it&apos;s crafting sleek, interactive interfaces
             with React, Next.js, Angular or building a robust, scalable backend using
@@ -44,7 +44,7 @@ const Hero = () => {
             >
               <PrimaryButton>Check Out My Resume</PrimaryButton>
             </a>
-            <a href="#skills">
+            <a href="#skills" className="md:block hidden">
               <SecondaryButton>Explore My Skills</SecondaryButton>
             </a>
           </div>
